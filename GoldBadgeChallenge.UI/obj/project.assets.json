@@ -1,0 +1,111 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "GoldBadgeChallange.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/GoldBadgeChallange.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GoldBadgeChallange.Data.dll": {}
+        }
+      },
+      "GoldBadgeChallange.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "GoldBadgeChallange.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GoldBadgeChallange.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GoldBadgeChallange.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GoldBadgeChallange.Data/1.0.0": {
+      "type": "project",
+      "path": "../GoldBadgeChallange.Data/GoldBadgeChallange.Data.csproj",
+      "msbuildProject": "../GoldBadgeChallange.Data/GoldBadgeChallange.Data.csproj"
+    },
+    "GoldBadgeChallange.Repository/1.0.0": {
+      "type": "project",
+      "path": "../GoldBadgeChallange.Repository/GoldBadgeChallange.Repository.csproj",
+      "msbuildProject": "../GoldBadgeChallange.Repository/GoldBadgeChallange.Repository.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "GoldBadgeChallange.Data >= 1.0.0",
+      "GoldBadgeChallange.Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/brianlane/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallenge.UI/GoldBadgeChallenge.UI.csproj",
+      "projectName": "GoldBadgeChallenge.UI",
+      "projectPath": "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallenge.UI/GoldBadgeChallenge.UI.csproj",
+      "packagesPath": "/Users/brianlane/.nuget/packages/",
+      "outputPath": "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallenge.UI/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/brianlane/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/GoldBadgeChallange.Data.csproj": {
+              "projectPath": "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/GoldBadgeChallange.Data.csproj"
+            },
+            "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/GoldBadgeChallange.Repository.csproj": {
+              "projectPath": "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/GoldBadgeChallange.Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

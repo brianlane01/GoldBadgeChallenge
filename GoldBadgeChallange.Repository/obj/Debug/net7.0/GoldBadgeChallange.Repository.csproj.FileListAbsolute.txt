@@ -1,0 +1,15 @@
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/bin/Debug/net7.0/GoldBadgeChallange.Repository.deps.json
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/bin/Debug/net7.0/GoldBadgeChallange.Repository.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/bin/Debug/net7.0/GoldBadgeChallange.Repository.pdb
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/bin/Debug/net7.0/GoldBadgeChallange.Data.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/bin/Debug/net7.0/GoldBadgeChallange.Data.pdb
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.csproj.AssemblyReference.cache
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.AssemblyInfoInputs.cache
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.AssemblyInfo.cs
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.csproj.CoreCompileInputs.cache
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.csproj.CopyComplete
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/refint/GoldBadgeChallange.Repository.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/GoldBadgeChallange.Repository.pdb
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/obj/Debug/net7.0/ref/GoldBadgeChallange.Repository.dll

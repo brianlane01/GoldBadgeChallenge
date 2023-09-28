@@ -1,0 +1,12 @@
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/bin/Debug/net7.0/GoldBadgeChallange.Data.deps.json
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/bin/Debug/net7.0/GoldBadgeChallange.Data.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/bin/Debug/net7.0/GoldBadgeChallange.Data.pdb
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.csproj.AssemblyReference.cache
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.AssemblyInfoInputs.cache
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.AssemblyInfo.cs
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.csproj.CoreCompileInputs.cache
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/refint/GoldBadgeChallange.Data.dll
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/GoldBadgeChallange.Data.pdb
+/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Data/obj/Debug/net7.0/ref/GoldBadgeChallange.Data.dll
