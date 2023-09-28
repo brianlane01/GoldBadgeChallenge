@@ -138,14 +138,17 @@ public class ProgramUI
 
         System.Console.WriteLine("Please choose a Customer Id to see deliveries for that Customer");
         int userInputCustomerId = int.Parse(ReadLine()!);
-        Delivery delivery = GetDeliveriesForCustomerId(userInputCustomerId);
-
-        if (delivery == null)
-            DisplayDataValidationError(userInputCustomerId);
+        var deliveryListing = _deliveryRepo.GetDeliveriesByCustomerId(userInputCustomerId);
+        if (deliveryListing.Count > 0)
+        {
+            foreach (var delivery in deliveryListing)
+            {
+                DisplayDeliveryInfoForCustomerId(delivery);
+            }
+        }
         else
         {
-            Clear();
-            DisplayDeliveryInfoForCustomerId(delivery!);
+            System.Console.WriteLine("Sorry no available deliveries");
         }
         PressAnyKeyToContinue();
 
@@ -174,6 +177,7 @@ public class ProgramUI
 
     private void DisplayDeliveryInfoForCustomerId(Delivery delivery)
     {
+
         System.Console.WriteLine("|                                                                                                                             |\n" +
                                 $"| Delivery ID: {delivery.DeliveryId} | Customer ID: {delivery.CustomerId} | Order Date: {delivery.OrderDate} | Delivery Date: {delivery.DeliveryDate}                   |\n" +
                                 "|                                                                                                                             |\n" +
@@ -185,11 +189,11 @@ public class ProgramUI
 
     }
 
-    private Delivery GetDeliveriesForCustomerId(int userInputCustomerId)
-    {
-        Delivery delivery = _deliveryRepo.GetDeliveriesByCustomerId(userInputCustomerId);
-        return delivery;
-    }
+    // private Delivery GetDeliveriesForCustomerId(int userInputCustomerId)
+    // {
+    //     Delivery delivery = _deliveryRepo.GetDeliveriesByCustomerId(userInputCustomerId);
+    //     return delivery;
+    // }
 
     private void ViewDeliveryByOrderStatus()
     {
@@ -306,6 +310,35 @@ public class ProgramUI
         bool isValidDate = false;
         while (!isValidDate)
         {
+            System.Console.WriteLine("Is this delivery for an existing customer or new customer? \n" +
+                                    "1. Existing Customer \n"+
+                                    "2. New Customer\n");
+            int userCusomerStatus = int.Parse(ReadLine()!);
+            switch(userCusomerStatus)
+            {
+                case 1:
+                    System.Console.WriteLine("Please enter Customer Id of customer for the Delivery");
+                    ViewAllCustomers();
+                    System.Console.WriteLine("Please enter Customer Id of customer for the Delivery");
+                    int userInputsCustomerId = int.Parse(ReadLine()!);
+                    deliveryInformationData.CustomerId = userInputsCustomerId;
+                    Clear();
+                    break;
+                
+                case 2:
+                    AddANewCustomer();
+                    ViewAllCustomers();
+                    System.Console.WriteLine("Please enter Customer Id of the new customer for the Delivery");
+                    int userInputsCustomerId2 = int.Parse(ReadLine()!);
+                    deliveryInformationData.CustomerId = userInputsCustomerId2;
+                    Clear();
+                    break;
+
+                default:
+                    System.Console.WriteLine("Invalid selection please try agian.");
+                    break;
+            }
+
             Console.Write("Enter a delivery date for the Delivery (yyyy-MM-dd HH:mm:ss): ");
             string userInputDeliveryDate = Console.ReadLine()!;
             if (DateTime.TryParse(userInputDeliveryDate, out DateTime deliveryDate))
@@ -528,9 +561,9 @@ public class ProgramUI
         WriteLine("===== Current Customers =====");
 
         RetrieveCustomerInformationForAllCustomers();
-
+        PressAnyKeyToContinue();
         ReadKey();
-        ManageCustomers();
+        // ManageCustomers();
     }
 
     private void AddANewCustomer()
@@ -558,7 +591,7 @@ public class ProgramUI
             }
         }
         PressAnyKeyToContinue();
-        ManageCustomers();
+        // ManageCustomers();
     }
 
     private Customer InputCustomerInformation()
@@ -651,32 +684,59 @@ public class ProgramUI
         else
         {
             if (_customerRepo.DeleteCustomer(customerData))
-                WriteLine($"Successfully deleted Customer with ID: {userInputCustomerId} !");
-            // WriteLine("Do you want to remove the customer's delivery(s) from the database?");
-            // string userInputYesorNo = ReadLine()!;
-            // if (userInputYesorNo.ToLower() == "Y".ToLower())
-            // {
-                
-            //     Delivery delivery = GetDeliveriesForCustomerId(userInputCustomerId);
-            //     DisplayDeliveryInfoForCustomerId(delivery);
-            //     WriteLine("Please select a Delivery by Delivery Id.");
-            //     // RetrieveDeliveryData();
+            WriteLine($"Successfully deleted Customer with ID: {userInputCustomerId} !");
+            WriteLine("Do you want to remove the customer's delivery(s) from the database?");
+            string userInputYesorNo = ReadLine()!;
+            if (userInputYesorNo.ToLower() == "Y".ToLower())
+            {
+                bool doneDeletingDelivery = false;
+                while (!doneDeletingDelivery)
+                {
+                    var deliveryListing = _deliveryRepo.GetDeliveriesByCustomerId(userInputCustomerId);
+                    if (deliveryListing.Count > 0)
+                    {
+                        foreach (var delivery in deliveryListing)
+                        {
+                            DisplayDeliveryInfoForCustomerId(delivery);
+                        }
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Sorry no available deliveries");
+                        PressAnyKeyToContinue();
+                        ManageCustomers();
+                    }
+                    WriteLine("Please select a Delivery by Delivery Id.");
+                    int userInputDeliveryId = int.Parse(ReadLine()!);
+                    Delivery deliveryData = RetriveDeliveryDataInDb(userInputDeliveryId);
 
-            //     WriteLine("Please select a Delivery by Delivery Id.");
-            //     int userInputDeliveryId = int.Parse(ReadLine()!);
-            //     Delivery deliveryData = RetriveDeliveryDataInDb(userInputDeliveryId);
+                    if (deliveryData == null)
+                        DisplayDataValidationError(userInputDeliveryId);
+                    else
+                    {
+                        if (_deliveryRepo.DeleteADelivery(deliveryData))
+                        {    
+                            WriteLine($"Successfully deleted Delivery with ID: {userInputDeliveryId} !");
+                        }
+                        else
+                        {
+                            WriteLine("Fail!");
+                        }
+                        WriteLine("Do you need to add another deliery to the database? Please input y or n:");
+                        string userInputYesorNo2 = ReadLine()!;
+                        if (userInputYesorNo2.ToLower() == "Y".ToLower())
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("All new deliveries have been added to the database!");
+                            doneDeletingDelivery = true;
+                        }
 
-            //     if (deliveryData == null)
-            //         DisplayDataValidationError(userInputDeliveryId);
-            //     else
-            //     {
-            //         if (_deliveryRepo.DeleteADelivery(deliveryData))
-            //             WriteLine($"Successfully deleted Delivery with ID: {userInputDeliveryId} !");
-            //         else
-            //             WriteLine("Fail!");
-
-            //     }
-            // }
+                    }
+                }
+            }
             else
                 WriteLine("Fail!");
 

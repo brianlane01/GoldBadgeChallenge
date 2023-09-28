@@ -79,9 +79,9 @@ namespace GoldBadgeChallange.Repository.Delivery_Repository
             return false;
         }
 
-        public Delivery GetDeliveriesByCustomerId(int customerId)
+        public List<Delivery> GetDeliveriesByCustomerId(int customerId)
         {
-            return _deliveryDbContext.FirstOrDefault(order => order.CustomerId == customerId);
+            return _deliveryDbContext.Where(order => order.CustomerId == customerId).ToList();
         }
 
         public List<Delivery> GetDeliveriesByOrderSatus(OrderStatus orderStatus)
