@@ -23,6 +23,7 @@ public class ProgramUI
         while (IsRunning)
         {
             Clear();
+            ForegroundColor = ConsoleColor.Blue;
             WriteLine("|=======================================|\n" +
                      "|                                       |\n" +
                      "|  Welcome to Warner Transit Federal's  |\n" +
@@ -37,7 +38,7 @@ public class ProgramUI
                      "|                                       |\n" +
                      "|=======================================|");
             try
-            {
+            {   
                 var userInput = int.Parse(Console.ReadLine()!);
                 switch (userInput)
                 {
@@ -66,7 +67,7 @@ public class ProgramUI
             }
         }
     }
-
+    
     private void ManageDeliveries()
     {
         Clear();

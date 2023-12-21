@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WNHhLVXYdRDuOivUj1mFCsmhhku4/0WPRAtpQjqB4O0dcqNmjBTzL2nL3OvuwRvqPVyPGJOJmkchJhdwRAmQEQ==",
+  "dgSpecHash": "+hwxkN30KxSH/uzthuaLqmmpAZxi2l3L1S3VCoUcHfiZ8en1t3QLiwhNW8EsoVArgPAG+S+MqTnD79UuxfJwZA==",
   "success": true,
   "projectFilePath": "/Users/brianlane/ElevenFiftyProjects/codingFoundations/GoldBadgeChallenge/GoldBadgeChallange.Repository/GoldBadgeChallange.Repository.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/brianlane/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/brianlane/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
